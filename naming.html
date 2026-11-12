@@ -1490,8 +1490,8 @@ body{background:#FAFBFE;color:var(--ink)}
 (async () => {
 // ---- assets/config.js ----
 // 공개 설정값. anon 키는 공개되는 값이며 RLS로 보호된다.
-const SUPABASE_URL = 'https://gsenqddhkwerhshudgbn.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdzZW5xZGRoa3dlcmhzaHVkZ2JuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY1NTQzMzgsImV4cCI6MjEwMjEzMDMzOH0.oPF_423pAQ-d_i-G5K4y9p3ROhknRa05uPNidnbEYEs';
+const SUPABASE_URL = 'https://rtkzwcjrudwzbwoxqyrv.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_vsCjVKXhwS3G8_gW5onWig_tie07cat';
 // DB의 event_settings.naming_deadline을 못 읽을 때만 쓰는 예비 마감 시각
 const FALLBACK_DEADLINE = '2026-11-30T23:59:59+09:00';
 const PAGES = { hub: 'index.html', worldcup: 'worldcup.html', naming: 'naming.html' };
@@ -1503,7 +1503,6 @@ function createSupa({ url, key, fetch = globalThis.fetch }) {
   const base = `${url.replace(/\/$/, '')}/rest/v1`;
   const headers = (extra = {}) => ({
     apikey: key,
-    Authorization: `Bearer ${key}`,
     'Content-Type': 'application/json',
     ...extra,
   });
